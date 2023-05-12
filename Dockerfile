@@ -9,7 +9,7 @@ RUN mvn clean package -Pprod -DskipTests
 # Package stage
 #
 FROM openjdk:17-jdk-slim
-COPY --from=build /target/chat-techies-lodge:0.0.1-SNAPSHOT.jar main.jar
+COPY --from=build /target/chat-techies-lodge-0.0.1-SNAPSHOT.jar main.jar
 # ENV PORT=8080
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","main.jar"]
